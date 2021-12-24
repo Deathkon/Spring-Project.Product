@@ -18,12 +18,8 @@ public class ProductEntity {
     @Column(name = "prod_qty", nullable = false)
     private Integer prod_qty;
 
-    public ProductEntity(Integer prod_id, String prod_name, String prod_desc, Integer prod_price, Integer prod_qty) {
-        this.prod_id = prod_id;
-        this.prod_name = prod_name;
-        this.prod_desc = prod_desc;
-        this.prod_price = prod_price;
-        this.prod_qty = prod_qty;
+
+    public ProductEntity() {
     }
 
     public Integer getProd_id() {
