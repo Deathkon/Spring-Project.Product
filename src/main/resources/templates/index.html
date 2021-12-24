@@ -19,9 +19,7 @@
     
     <div class="container">
       <h2 class="mb-5">Stock Information</h2>
-      
       <div class="table-responsive">
-
         <table class="table table-striped custom-table">
           <thead>
             <tr>
@@ -47,10 +45,44 @@
           </tbody>
         </table>
       </div>
-
-
+     <!-- bootstrap modular form which have input product name, description , price and quantity. -->
+     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >Add</button>     
+     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal-dialog">
+         <div class="modal-content">
+           <div class="modal-header">
+             <h5 class="modal-title" id="exampleModalLabel">CREATE & UPDATE PRODUCT</h5>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+           </div>
+           <div class="modal-body">
+             <form>
+               <div class="mb-3">
+                 <label for="prod_name" class="col-form-label">PRODUCT Name</label>
+                 <input type="text" class="form-control" id="prod_name">
+               </div>
+               <div class="mb-3">
+                 <label for="message-text" class="col-form-label">Description</label>
+                 <textarea class="form-control" id="message-text"></textarea>
+               </div>
+                <div class="mb-3">
+                  <label for="prod_price" class="col-form-label">PRODUCT Price</label>
+                  <input type="number" class="form-control" id="prod_price">
+                </div>
+                <div class="mb-3">
+                  <label for="prod_qty" class="col-form-label">PRODUCT Quantity</label>
+                  <input type="number" class="form-control" id="prod_qty">
+                </div>
+             </form>
+           </div>
+           <div class="modal-footer">
+            <button class="btn btn-warning" type="reset" value="Reset">Reset</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save</button>
+          </div>
+         </div>
+       </div>
+     </div>
     </div>
-
   </div>
 <style>
   body {
