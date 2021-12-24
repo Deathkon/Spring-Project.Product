@@ -17,6 +17,8 @@ public class ProductEntity {
     private Integer prod_price;
     @Column(name = "prod_qty", nullable = false)
     private Integer prod_qty;
+    @Column(name = "prod_type", nullable = false)
+    private String prod_type;
 
 
     public ProductEntity() {
@@ -61,4 +63,13 @@ public class ProductEntity {
     public void setProd_qty(Integer prod_qty) {
         this.prod_qty = prod_qty;
     }
+
+    public String getProd_type() {
+        return this.prod_type;
+    }
+
+    public void setProd_type(String prod_type) {
+        this.prod_type = prod_type;
+    }
+
 }
