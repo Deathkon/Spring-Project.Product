@@ -7,14 +7,15 @@ import javax.persistence.*;
 public class ProductEntity {
     @Id // This tells Hibernate to make a column for id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "Product_ID")
     private Integer prod_id;
-    @Column(name = "prod_name")
+    @Column(name = "prod_name", nullable = false)
     private String prod_name;
-    @Column(name = "prod_desc")
+    @Column(name = "prod_desc", nullable = false)
     private String prod_desc;
-    @Column(name = "prod_price")
+    @Column(name = "prod_price", nullable = false)
     private Integer prod_price;
-    @Column(name = "prod_qty")
+    @Column(name = "prod_qty", nullable = false)
     private Integer prod_qty;
 
     public ProductEntity(Integer prod_id, String prod_name, String prod_desc, Integer prod_price, Integer prod_qty) {
@@ -64,5 +65,4 @@ public class ProductEntity {
     public void setProd_qty(Integer prod_qty) {
         this.prod_qty = prod_qty;
     }
-
 }
