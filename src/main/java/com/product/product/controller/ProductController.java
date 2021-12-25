@@ -17,12 +17,12 @@ public class ProductController {
     @GetMapping("/")
     public String viewHome(Model model) {
         model.addAttribute("listProduct", productRepository.findAll());
-        model.addAttribute("listProd", new ProductEntity());
+        model.addAttribute("addproduct", new ProductEntity());
         return "index";
     }
     @PostMapping("/add")
-    public String addProduct(@ModelAttribute("listProd") ProductEntity productEntity) {
-        productRepository.save(productEntity);
+    public String addProduct(@ModelAttribute("addproduct") ProductEntity addproduct) {
+        productRepository.save(addproduct);
         return "redirect:/";
     }
     
