@@ -14,16 +14,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class ProductController {
     @Autowired
     private ProductRepository productRepository;
+
     @GetMapping("/")
     public String viewHome(Model model) {
         model.addAttribute("listProduct", productRepository.findAll());
         model.addAttribute("addproduct", new ProductEntity());
         return "index";
     }
+
     @PostMapping("/add")
     public String addProduct(@ModelAttribute("addproduct") ProductEntity addproduct) {
         productRepository.save(addproduct);
         return "redirect:/";
     }
-    
+
 }
